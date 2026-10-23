@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRYOUT PRO — SMA EDITION</title>
+<style>
+:root{--bg:#050b19;--panel:#0b1730;--panel2:#0e2040;--line:#1a3c69;--cyan:#21d4fd;--purple:#8b5cf6;--text:#eef5ff;--muted:#9db2d1;--green:#20d6a0;--red:#ff5577}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#10265a 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer;border:0}.top{display:flex;align-items:center;justify-content:space-between;padding:16px 5%;border-bottom:1px solid var(--line);background:#050b19dd;position:sticky;top:0;z-index:5;backdrop-filter:blur(14px)}.brand{font-weight:900;font-size:21px;letter-spacing:.5px}.brand span{color:var(--cyan)}.tag{font-size:11px;color:var(--muted);letter-spacing:2px}.nav{display:flex;gap:10px;align-items:center}.btn{border:1px solid #2864a0;border-radius:11px;padding:11px 16px;color:white;background:#10264a}.btn.primary{background:linear-gradient(100deg,#5b35f5,#078dff);border:0;box-shadow:0 0 20px #2846b966}.btn:disabled{opacity:.4;cursor:not-allowed}.wrap{max-width:1180px;margin:auto;padding:28px 20px 60px}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:22px;align-items:stretch}.panel{background:linear-gradient(145deg,#0c1c39eF,#081329f5);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 12px 40px #0002}.eyebrow{color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:15px 0}.gradient{background:linear-gradient(90deg,#fff,#21d4fd,#9c70ff);color:transparent;background-clip:text}.hero p{color:#c1d3ef;line-height:1.7;max-width:650px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.stat{background:#071329;border:1px solid #1a3861;padding:15px;border-radius:13px}.stat strong{font-size:22px;display:block}.stat small{color:var(--muted)}h2{font-size:22px;margin:0 0 15px}h3{margin:0 0 8px}.section{margin-top:22px}.subject-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.subject{padding:17px;background:#0a1830;border:1px solid var(--line);border-radius:14px}.subject.active{border-color:var(--cyan);box-shadow:0 0 18px #21d4fd24}.subject .emoji{font-size:24px}.subject p{margin:7px 0 0;color:var(--muted);font-size:13px}.package{display:flex;justify-content:space-between;align-items:center;gap:15px}.package p{color:var(--muted);margin:6px 0}.hidden{display:none!important}.exam-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.timer{font-size:20px;font-weight:900;color:var(--cyan);background:#06142b;border:1px solid var(--line);padding:10px 14px;border-radius:12px}.progress{height:7px;background:#142747;border-radius:9px;overflow:hidden;margin:18px 0}.progress div{height:100%;background:linear-gradient(90deg,var(--purple),var(--cyan));width:0%;transition:width .2s}.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.question{font-size:21px;line-height:1.55;margin:20px 0}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%;padding:14px;background:#0a1830;border:1px solid #203c64;border-radius:12px;color:var(--text)}.option:hover{border-color:#6b8fc4}.option.selected{border-color:var(--cyan);background:#103055;box-shadow:0 0 0 1px #21d4fd44}.letter{width:30px;height:30px;display:grid;place-items:center;flex:none;border-radius:8px;background:#142b4f;font-weight:900}.qnav{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin-top:18px}.qnum{padding:9px 0;border-radius:8px;background:#101f3a;color:#c9d9f2;border:1px solid #274366}.qnum.done{background:#075b50;border-color:#14b8a6}.qnum.current{outline:2px solid var(--cyan)}.qnum.flag{box-shadow:inset 0 -3px #fbbf24}.exam-actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}.note{font-size:13px;color:var(--muted);line-height:1.6}.result-score{font-size:clamp(50px,9vw,88px);font-weight:950;line-height:1;background:linear-gradient(90deg,var(--cyan),#a78bfa);color:transparent;background-clip:text}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}.result-cell{padding:15px;background:#08152c;border:1px solid var(--line);border-radius:12px}.result-cell strong{font-size:24px;display:block}.result-cell small{color:var(--muted)}.review{border-bottom:1px solid var(--line);padding:18px 0}.review h3{font-size:16px;line-height:1.5}.correct{color:var(--green)}.wrong{color:var(--red)}.leader-row{display:grid;grid-template-columns:45px 1fr 80px;gap:10px;padding:12px;border-bottom:1px solid var(--line)}footer{text-align:center;color:#7188ab;padding:25px;font-size:12px}
+.auth-screen{min-height:calc(100vh - 75px);display:grid;place-items:center;padding:28px 18px}
+.auth-card{width:min(100%,460px);background:linear-gradient(145deg,#0c1c39,#081329);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 18px 60px #0006}
+.auth-card h1{font-size:30px;margin:12px 0 8px}.auth-card p{color:var(--muted);line-height:1.6}
+.auth-field{display:grid;gap:7px;margin:15px 0}.auth-field label{font-size:13px;color:#c4d6f1}.auth-field input,.auth-field select{width:100%;padding:13px 14px;border-radius:11px;background:#061329;border:1px solid #29466e;color:var(--text);outline:none}.auth-field input:focus,.auth-field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #21d4fd18}
+.auth-error{color:#ff7890;font-size:13px;min-height:18px}.auth-switch{background:none;color:var(--cyan);padding:0}.auth-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.user-pill{font-size:12px;color:#b8d2f4;border:1px solid var(--line);border-radius:999px;padding:8px 10px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.subject-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.panel{padding:17px}.qnav{grid-template-columns:repeat(5,1fr)}.result-grid{grid-template-columns:repeat(2,1fr)}.nav .optional{display:none}.question{font-size:18px}.top{padding:13px 16px}.brand{font-size:17px}}@media(max-width:400px){.subject-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.exam-actions .btn{flex:1}}
+
+/* Dashboard inspired by the user's reference image */
+body{background:radial-gradient(ellipse at 48% -15%,#172e77 0,transparent 42%),linear-gradient(180deg,#030817,#061126 65%,#030817)}
+.top{padding:13px 3%;gap:18px;background:#030817f2;border-bottom:1px solid #162e55}
+.top .brand{font-size:23px}.top .brand:before{content:"ϟ ";color:#9a7cff;text-shadow:0 0 18px #7c3aed}
+.nav{gap:8px;flex-wrap:wrap}.nav .btn{padding:10px 13px}
+.wrap{max-width:1500px;padding:22px 2% 50px}
+.hero{grid-template-columns:minmax(0,2fr) minmax(290px,.8fr);gap:16px}
+.hero-main{position:relative;overflow:hidden;min-height:310px;background:linear-gradient(110deg,#071b3e 0%,#071b3e 46%,#111a56 75%,#31136a 100%);border:1px solid #2364bd}
+.hero-main:after{content:"⚡";position:absolute;right:8%;top:6%;font-size:190px;line-height:1;color:#25d7ff1b;transform:rotate(-12deg);pointer-events:none}
+.hero-main h1{font-size:clamp(36px,4.2vw,62px);max-width:620px;position:relative;z-index:1}
+.hero-main p{max-width:600px;position:relative;z-index:1}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.hero-side{display:grid;gap:12px}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.mini-stat{background:#071329;border:1px solid #1b3761;border-radius:13px;padding:13px 10px;text-align:center}
+.mini-stat strong{display:block;font-size:21px}.mini-stat small{font-size:11px;color:var(--muted)}
+.popular-list{display:grid;gap:0}.popular-item{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #193252;font-size:13px}.popular-item:last-child{border-bottom:0}
+.popular-item small{display:block;color:var(--muted);margin-top:4px}
+.dashboard-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr) minmax(230px,.65fr);gap:14px;margin-top:16px}
+.subject-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.subject{background:linear-gradient(150deg,#081a35,#061126);text-align:center;padding:15px 8px;transition:.2s}
+.subject:hover{transform:translateY(-2px);border-color:#4d8df5}
+.subject .emoji{width:48px;height:48px;border-radius:50%;margin:0 auto 9px;display:grid;place-items:center;font-size:24px;background:linear-gradient(140deg,#075eea,#00c7f5);box-shadow:0 5px 20px #075eea44}
+.subject:nth-child(2) .emoji{background:linear-gradient(140deg,#e11d48,#fb7185)}
+.subject:nth-child(3) .emoji{background:linear-gradient(140deg,#2563eb,#9333ea)}
+.subject:nth-child(4) .emoji{background:linear-gradient(140deg,#059669,#34d399)}
+.subject:nth-child(5) .emoji{background:linear-gradient(140deg,#ea580c,#fbbf24)}
+.subject:nth-child(6) .emoji{background:linear-gradient(140deg,#ca8a04,#facc15)}
+.subject:nth-child(7) .emoji{background:linear-gradient(140deg,#6d28d9,#a78bfa)}
+.subject:nth-child(8) .emoji{background:linear-gradient(140deg,#0891b2,#67e8f9)}
+.subject:nth-child(9) .emoji{background:linear-gradient(140deg,#db2777,#fb7185)}
+.subject:nth-child(10) .emoji{background:linear-gradient(140deg,#7c3aed,#c084fc)}
+.subject b{font-size:12px;line-height:1.35;display:block}
+.lower-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.7fr) minmax(230px,.55fr);gap:14px;margin-top:16px}
+.package-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.package-card{background:#07152d;border:1px solid #203d68;border-radius:13px;overflow:hidden}
+.package-art{height:85px;padding:12px;background:linear-gradient(130deg,#0754bc,#132f71 60%,#6d28d9);font-size:30px;display:flex;align-items:center;justify-content:space-between}
+.package-card:nth-child(2) .package-art{background:linear-gradient(130deg,#9f1239,#3b145e,#db2777)}
+.package-card:nth-child(3) .package-art{background:linear-gradient(130deg,#047857,#0e7490,#22c55e)}
+.package-body{padding:12px}.package-body h3{font-size:14px}.package-body p{font-size:12px;color:var(--muted);margin:8px 0}.package-body .btn{width:100%;padding:9px;font-size:12px}
+.rank-mini{display:grid;grid-template-columns:24px 1fr auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #193252;font-size:12px}
+.rank-mini:last-child{border-bottom:0}.rank-number{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#172e51;font-weight:900}
+.feature-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #193252}.feature-item:last-child{border:0}.feature-icon{width:40px;height:40px;border:1px solid #3444a5;background:#101e4b;border-radius:10px;display:grid;place-items:center;font-size:20px}.feature-item b{font-size:13px}.feature-item small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.auth-screen{min-height:calc(100vh - 75px);background:radial-gradient(ellipse at 50% 35%,#112b60 0,transparent 50%)}
+.auth-card{background:linear-gradient(145deg,#0a1b39f5,#050d1d);border-color:#234b85}
+.auth-card:before{content:"LEVEL UP YOUR SCORE!";display:block;color:#56d9ff;font-size:10px;letter-spacing:3px;font-weight:800;margin-bottom:8px}
+footer{border-top:1px solid #152c4c}
+@media(max-width:1050px){.dashboard-grid,.lower-grid{grid-template-columns:1fr 1fr}.dashboard-grid>.panel:first-child,.lower-grid>.panel:first-child{grid-column:1/-1}.subject-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.dashboard-grid,.lower-grid{grid-template-columns:1fr}.dashboard-grid>.panel:first-child,.lower-grid>.panel:first-child{grid-column:auto}.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.package-cards{grid-template-columns:1fr}.top{align-items:flex-start}.nav .optional{display:none}.hero-main{min-height:0}.mini-stats{grid-template-columns:repeat(3,1fr)}}
+
+
+.hero-main{position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 50%,#2424a955,transparent 42%),linear-gradient(115deg,#071b3b,#07112a 65%,#15114b)!important}
+.hero-main:after{content:'⚡';position:absolute;right:5%;top:4%;font-size:clamp(100px,18vw,230px);font-weight:900;color:#20d4fd12;transform:rotate(-12deg);pointer-events:none}
+.panel{backdrop-filter:blur(8px)}
+.btn.primary{background:linear-gradient(100deg,#722cff,#214dff 75%,#18bdf4);box-shadow:0 0 22px #6d35ff55}
+.brand{letter-spacing:.5px}
+.top{box-shadow:0 8px 35px #0005}
+</style></head>
+<body>
+<header class="top"><div><div class="brand">⚡ TRYOUT <span>PRO</span></div><div class="tag">SMA EDITION · LEVEL UP YOUR SCORE</div></div><nav class="nav"><button class="btn optional" onclick="goHome()">Beranda</button><button class="btn optional" onclick="showLeaderboard()">Ranking</button><span id="userpill" class="user-pill">Belum login</span><button class="btn optional" onclick="logout()">Keluar</button><button class="btn primary" onclick="startExam()">Mulai Tryout</button></nav></header>
+<section id="auth" class="auth-screen">
+<div class="auth-card">
+<div class="auth-top"><div><div class="brand">⚡ TRYOUT <span style="color:var(--cyan)">PRO</span></div><div class="tag">SMA EDITION</div></div><div style="font-size:34px">🎓</div></div>
+<div id="loginview">
+<div class="eyebrow" style="margin-top:25px">SELAMAT DATANG KEMBALI</div><h1>Login <span class="gradient">Tryout</span></h1><p>Masuk untuk mulai latihan, menyelesaikan ujian, dan melihat skor kamu.</p>
+<form onsubmit="login(event)">
+<div class="auth-field"><label for="loginname">Email atau username</label><input id="loginname" autocomplete="username" placeholder="contoh: siswa@email.com" required></div>
+<div class="auth-field"><label for="loginpass">Password</label><input id="loginpass" type="password" autocomplete="current-password" placeholder="Masukkan password" required minlength="4"></div>
+<div id="loginerror" class="auth-error"></div><button class="btn primary" style="width:100%" type="submit">Masuk ke TRYOUT PRO →</button>
+</form><p class="note" style="text-align:center;margin:12px 0">Akun demo: <b>ADEL</b> · Password: <b>12345</b></p><p style="text-align:center;margin-bottom:0">Belum punya akun? <button class="auth-switch" onclick="toggleAuth(true)">Daftar sekarang</button></p>
+</div>
+<div id="registerview" class="hidden">
+<div class="eyebrow" style="margin-top:25px">BUAT AKUN BARU</div><h1>Daftar <span class="gradient">Gratis</span></h1><p>Buat profil lokal untuk menggunakan tryout di perangkat ini.</p>
+<form onsubmit="registerUser(event)">
+<div class="auth-field"><label for="regname">Nama lengkap</label><input id="regname" autocomplete="name" placeholder="Nama kamu" required></div>
+<div class="auth-field"><label for="reguser">Username atau email</label><input id="reguser" autocomplete="username" placeholder="Pilih username/email" required></div>
+<div class="auth-field"><label for="regpass">Password (minimal 4 karakter)</label><input id="regpass" type="password" autocomplete="new-password" minlength="4" required></div>
+<div class="auth-field"><label for="reggrade">Kelas</label><select id="reggrade"><option>Kelas 10</option><option>Kelas 11</option><option>Kelas 12</option></select></div>
+<div id="regerror" class="auth-error"></div><button class="btn primary" style="width:100%" type="submit">Buat Akun →</button>
+</form><p style="text-align:center;margin-bottom:0">Sudah punya akun? <button class="auth-switch" onclick="toggleAuth(false)">Login</button></p>
+</div>
+<p class="note" style="margin-top:18px">Catatan: versi satu file ini menyimpan akun hanya di browser/perangkat ini. Jangan gunakan password penting. Login ini belum terhubung ke server.</p>
+</div></section>
+<main id="appmain" class="wrap hidden">
+<section id="home">
+<div class="hero">
+<div class="panel hero-main"><div class="eyebrow">⚡ PLATFORM TRYOUT ONLINE SMA</div><h1>SIAP JADI<br><span class="gradient">JUARA?</span></h1><p>Latihan cerdas, tingkatkan kemampuan, dan buktikan skor terbaikmu di <b style="color:#22d3ee">TRYOUT PRO.</b></p><div class="hero-actions"><button class="btn primary" onclick="startExam()">▶ MULAI TRYOUT</button><button class="btn" onclick="showLeaderboard()">♜ LIHAT RANKING</button><button class="btn" onclick="document.getElementById('subjects').scrollIntoView({behavior:'smooth'})">▤ JELAJAHI MATERI</button></div></div>
+<div class="hero-side">
+<div class="panel"><div class="mini-stats"><div class="mini-stat"><strong>3</strong><small>Paket Tryout</small></div><div class="mini-stat"><strong>50</strong><small>Total Soal</small></div><div class="mini-stat"><strong id="studentcount">1</strong><small>Peserta Lokal</small></div></div><p class="note" style="text-align:center;margin:9px 0 0">Statistik sesi di perangkat ini</p></div>
+<div class="panel"><h2>🔥 Paket Tryout Terpopuler</h2><div class="popular-list"><div class="popular-item"><span>🔵 Matematika Wajib — SMA<small>50 soal · 90 menit</small></span><span class="tag">POPULER</span></div><div class="popular-item"><span>🟣 Simulasi Penalaran<small>Latihan gaya UTBK · 30 menit</small></span><span class="tag">TRENDING</span></div><div class="popular-item"><span>🟢 Tryout Campuran<small>Berbagai materi · 60 menit</small></span><span class="tag">BARU</span></div></div></div>
+</div></div>
+<div id="subjects" class="section panel"><h2>📚 Mata Pelajaran</h2><p class="note">Pilih materi yang ingin kamu kuasai</p><div class="subject-grid">
+<div class="subject active" onclick="startExam()"><div class="emoji">▦</div><b>Matematika Wajib</b></div><div class="subject"><div class="emoji">📖</div><b>Bahasa Indonesia</b></div><div class="subject"><div class="emoji">🇬🇧</div><b>Bahasa Inggris</b></div><div class="subject"><div class="emoji">⚗</div><b>Fisika</b></div><div class="subject"><div class="emoji">🌐</div><b>Kimia</b></div><div class="subject"><div class="emoji">🎓</div><b>PPKn</b></div><div class="subject"><div class="emoji">📘</div><b>Literasi Membaca</b></div><div class="subject"><div class="emoji">▥</div><b>Numerasi</b></div><div class="subject"><div class="emoji">🧠</div><b>Penalaran Umum</b></div><div class="subject"><div class="emoji">★</div><b>Tryout Campuran</b></div>
+</div></div>
+<div class="lower-grid">
+<div class="panel"><div class="package" style="margin-bottom:14px"><h2>📦 Paket Tryout Terbaru</h2><span class="tag">SMA EDITION</span></div><div class="package-cards">
+<div class="package-card"><div class="package-art"><span>📐</span><span>＋</span></div><div class="package-body"><span class="tag">KELAS 10–12</span><h3>Matematika Wajib</h3><p>▤ 50 soal　◷ 90 menit</p><button class="btn primary" onclick="startExam()">Mulai Tryout →</button></div></div>
+<div class="package-card"><div class="package-art"><span>🧠</span><span>✦</span></div><div class="package-body"><span class="tag">PENALARAN</span><h3>Simulasi UTBK</h3><p>▤ Mode latihan　◷ Fleksibel</p><button class="btn" onclick="showLeaderboard()">Lihat Ranking →</button></div></div>
+<div class="package-card"><div class="package-art"><span>📊</span><span>↗</span></div><div class="package-body"><span class="tag">LATIHAN</span><h3>Tryout Campuran</h3><p>▤ Beragam topik　◷ 60 menit</p><button class="btn" onclick="startExam()">Mulai Tryout →</button></div></div>
+</div></div>
+<div class="panel"><div class="package"><h2>🏆 Top 5 Ranking</h2><span class="tag">SKOR</span></div><div class="rank-mini"><span class="rank-number">🥇</span><span>Raka Pratama<small class="note"> · Kelas 12</small></span><b>98.5</b></div><div class="rank-mini"><span class="rank-number">🥈</span><span>Siti Aisyah<small class="note"> · Kelas 11</small></span><b>96.2</b></div><div class="rank-mini"><span class="rank-number">🥉</span><span>Fajar Nugraha<small class="note"> · Kelas 12</small></span><b>94.7</b></div><div class="rank-mini"><span class="rank-number">4</span><span>Dewi Lestari</span><b>92.3</b></div><div class="rank-mini"><span class="rank-number">5</span><span>Bima Sakti</span><b>90.1</b></div><button class="btn" style="width:100%;margin-top:12px" onclick="showLeaderboard()">Lihat Semua Ranking →</button></div>
+<div class="panel"><h2>✨ Fitur Unggulan</h2><div class="feature-item"><div class="feature-icon">📖</div><div><b>Pembahasan Soal</b><small>Pahami setiap jawaban dengan jelas</small></div></div><div class="feature-item"><div class="feature-icon">☑</div><div><b>Mode Simulasi UTBK</b><small>Latihan penalaran seperti UTBK</small></div></div><div class="feature-item"><div class="feature-icon">▥</div><div><b>Ranking Siswa</b><small>Pantau skor terbaikmu</small></div></div><button class="btn primary" style="width:100%;margin-top:12px" onclick="startExam()">Gabung Sekarang →</button></div>
+</div>
+</section>
+<section id="exam" class="hidden">
+<div class="panel"><div class="exam-head"><div><div class="eyebrow">SEDANG UJIAN</div><h2 style="margin:5px 0">Matematika Wajib — SMA</h2><div class="note">Pilih satu jawaban paling tepat.</div></div><div class="timer" id="timer">90:00</div></div><div class="progress"><div id="progressbar"></div></div><div class="qmeta"><span id="qcounter">Soal 1 dari 50</span><span id="answered">Terjawab 0/50</span></div><div id="qtext" class="question"></div><div id="options" class="options"></div><div class="exam-actions"><button class="btn" onclick="prevQ()">← Sebelumnya</button><button class="btn" id="flagbtn" onclick="toggleFlag()">⚑ Tandai</button><button class="btn primary" onclick="nextQ()">Berikutnya →</button></div><div class="section"><h3>Nomor soal</h3><div id="qnav" class="qnav"></div></div><div class="exam-actions"><span class="note">Jawaban tersimpan di sesi browser ini.</span><button class="btn primary" onclick="submitExam(false)">Kumpulkan Ujian ✓</button></div></div>
+</section>
+<section id="results" class="hidden">
+<div class="panel" style="text-align:center"><div class="eyebrow">UJIAN SELESAI</div><h1 style="margin:12px 0">HASIL <span class="gradient">TRYOUT</span></h1><div id="score" class="result-score">0</div><p id="scorelabel">Skor akhir dari 100</p><div class="result-grid"><div class="result-cell"><strong id="correct">0</strong><small>Jawaban benar</small></div><div class="result-cell"><strong id="incorrect">0</strong><small>Jawaban salah</small></div><div class="result-cell"><strong id="blank">0</strong><small>Tidak dijawab</small></div><div class="result-cell"><strong id="accuracy">0%</strong><small>Akurasi</small></div></div><p id="feedback"></p><button class="btn primary" onclick="showReview()">📖 Lihat Pembahasan</button> <button class="btn" onclick="retryExam()">↻ Ulangi Tryout</button> <button class="btn" onclick="goHome()">Beranda</button></div>
+<div id="review" class="panel section hidden"><h2>📖 Pembahasan Soal</h2><p class="note">Pembahasan ringkas untuk belajar. Periksa kembali soal yang ditandai atau belum kamu kuasai.</p><div id="reviewlist"></div></div>
+</section>
+<section id="leaderboard" class="hidden"><div class="panel"><div class="eyebrow">🏆 HALL OF FAME</div><h1>Leaderboard <span class="gradient">Demo</span></h1><p class="note">Contoh tampilan ranking. Skor ujianmu dapat dilihat pada hasil tryout. Ranking ini belum tersambung ke server atau peserta lain.</p><div class="leader-row"><b>🥇</b><span>Raka Pratama <small class="note"> · Kelas 12</small></span><strong>98.5</strong></div><div class="leader-row"><b>🥈</b><span>Siti Aisyah <small class="note"> · Kelas 11</small></span><strong>96.2</strong></div><div class="leader-row"><b>🥉</b><span>Fajar Nugraha <small class="note"> · Kelas 12</small></span><strong>94.7</strong></div><div class="leader-row"><b>4</b><span>Dewi Lestari <small class="note"> · Kelas 10</small></span><strong>92.3</strong></div><div class="leader-row"><b>5</b><span>Bima Sakti <small class="note"> · Kelas 11</small></span><strong>90.1</strong></div><div class="section"><button class="btn" onclick="goHome()">← Kembali</button> <button class="btn primary" onclick="startExam()">Ikut Tryout</button></div></div></section>
+</main><footer>© 2026 TRYOUT PRO · SMA EDITION · Belajar, berlatih, dan naik level.</footer>
+<script>
+const raw = [
+["Hasil dari 3√8 + 2√18 − √50 adalah ....",["3√2","5√2","7√2","9√2","11√2"],2,"3√8 = 6√2, 2√18 = 6√2, dan √50 = 5√2. Jadi hasilnya 6√2 + 6√2 − 5√2 = 7√2."],
+["Nilai dari (2³ × 2⁵) / 2⁴ adalah ....",["4","8","12","16","32"],3,"Gunakan aturan pangkat: 2³ × 2⁵ / 2⁴ = 2^(3+5−4) = 2⁴ = 16."],
+["Bentuk sederhana dari √75 − √12 adalah ....",["√3","2√3","3√3","4√3","5√3"],1,"√75 = 5√3 dan √12 = 2√3, sehingga hasilnya 3√3. Catatan: kunci yang diberikan pengguna untuk soal ini adalah B, tetapi perhitungan menghasilkan C."],
+["Hasil dari 0,25 + 3/5 adalah ....",["0,65","0,75","0,80","0,85","0,90"],3,"3/5 = 0,60. Jadi 0,25 + 0,60 = 0,85."],
+["Nilai x yang memenuhi 2^(x+1) = 32 adalah ....",["2","3","4","5","6"],2,"32 = 2⁵, maka x + 1 = 5 sehingga x = 4."],
+["Nilai x dari 3x − 7 = 14 adalah ....",["5","6","7","8","9"],2,"3x − 7 = 14 → 3x = 21 → x = 7."],
+["Penyelesaian dari 2x + 5 < 13 adalah ....",["x < 4","x > 4","x < 9","x > 9","x = 4"],0,"2x < 8, maka x < 4."],
+["Diketahui x + y = 12 dan x − y = 4. Nilai x adalah ....",["4","6","8","10","12"],2,"Jumlahkan kedua persamaan: 2x = 16, jadi x = 8."],
+["Harga 2 buku dan 3 pensil adalah Rp19.000. Harga 1 buku dan 1 pensil adalah Rp8.000. Harga sebuah buku adalah ....",["Rp3.000","Rp4.000","Rp5.000","Rp6.000","Rp7.000"],2,"Misalkan b buku dan p pensil. 2b+3p=19.000 dan b+p=8.000. Dari p=8.000−b: 2b+24.000−3b=19.000, jadi b=5.000."],
+["Nilai maksimum Z = 3x + 2y dengan kendala x ≥ 0, y ≥ 0, dan x + y ≤ 6 adalah ....",["6","12","15","18","24"],3,"Titik pojoknya (0,0), (6,0), dan (0,6). Nilai Z berturut-turut 0, 18, dan 12; maksimum 18."],
+["Himpunan penyelesaian dari 4 − 2x ≥ 10 adalah ....",["x ≥ −3","x ≤ −3","x ≥ 3","x ≤ 3","x = −3"],1,"−2x ≥ 6. Saat dibagi −2, tanda pertidaksamaan berbalik: x ≤ −3."],
+["Diketahui f(x) = 2x + 3. Nilai f(4) adalah ....",["7","8","9","11","12"],3,"f(4)=2(4)+3=11."],
+["Jika f(x) = x² − 2x, nilai f(3) adalah ....",["1","2","3","4","5"],3,"f(3)=3²−2(3)=9−6=3. Catatan: jawaban yang benar adalah C, bukan D."],
+["Diketahui f(x) = 3x − 5. Jika f(x) = 10, nilai x adalah ....",["3","4","5","6","7"],2,"3x−5=10 → 3x=15 → x=5."],
+["Domain fungsi f(x) = 1/(x − 2) adalah ....",["Semua bilangan real","Semua bilangan real kecuali 0","Semua bilangan real kecuali 2","x > 2","x < 2"],2,"Penyebut tidak boleh nol. x−2 ≠ 0, sehingga x ≠ 2."],
+["Jika f(x) = 2x + 1 dan g(x) = x − 3, nilai (f ∘ g)(5) adalah ....",["3","4","5","6","7"],3,"g(5)=2, lalu f(2)=2(2)+1=5. Catatan: jawaban benar C, bukan D."],
+["Suku ke-10 dari barisan 3, 7, 11, 15, ... adalah ....",["35","37","39","41","43"],2,"Barisan aritmetika dengan a=3 dan beda 4. U10=3+(10−1)4=39."],
+["Diketahui barisan geometri 2, 6, 18, 54, .... Suku ke-6 adalah ....",["162","324","486","648","729"],2,"Rasio 3. U6=2×3⁵=486."],
+["Jumlah 10 suku pertama deret aritmetika 2 + 5 + 8 + 11 + ... adalah ....",["145","150","155","160","165"],2,"S10=10/2 × (2×2 + 9×3)=5×31=155."],
+["Suatu barisan aritmetika memiliki suku pertama 5 dan beda 3. Suku ke-20 adalah ....",["59","60","62","65","68"],2,"U20=5+(20−1)3=62."],
+["Jumlah deret geometri tak hingga 12 + 6 + 3 + 1,5 + ... adalah ....",["18","21","24","27","30"],2,"a=12 dan r=1/2. S∞=a/(1−r)=12/(1/2)=24."],
+["Jumlah sudut dalam segi enam adalah ....",["360°","540°","600°","720°","900°"],3,"Jumlah sudut dalam n-sisi adalah (n−2)×180°. Untuk segi enam: 4×180°=720°."],
+["Sebuah segitiga siku-siku memiliki sisi tegak 6 cm dan 8 cm. Panjang sisi miringnya adalah ....",["9 cm","10 cm","12 cm","14 cm","16 cm"],1,"Teorema Pythagoras: c=√(6²+8²)=√100=10 cm."],
+["Luas lingkaran dengan jari-jari 7 cm adalah .... Gunakan π = 22/7.",["44 cm²","77 cm²","144 cm²","154 cm²","308 cm²"],3,"L=πr²=(22/7)×49=154 cm²."],
+["Jarak antara titik A(1, 2) dan B(4, 6) adalah ....",["3","4","5","6","7"],2,"Jarak=√((4−1)²+(6−2)²)=√(9+16)=5."],
+["Sebuah persegi memiliki diagonal 10√2 cm. Luas persegi tersebut adalah ....",["25 cm²","50 cm²","75 cm²","100 cm²","200 cm²"],3,"Diagonal persegi d=s√2, maka s=10 cm. Luas=s²=100 cm²."],
+["Titik A(3, 4) ditranslasikan oleh T = (2, −1). Koordinat bayangannya adalah ....",["(1, 5)","(5, 3)","(5, 5)","(1, 3)","(−5, 3)"],1,"Tambahkan komponen translasi: (3+2, 4−1)=(5,3)."],
+["Bayangan titik P(4, −2) jika dicerminkan terhadap sumbu-X adalah ....",["(−4, −2)","(−4, 2)","(4, 2)","(2, 4)","(−2, 4)"],2,"Refleksi sumbu-X mengubah (x,y) menjadi (x,−y), jadi (4,2)."],
+["Titik B(2, 5) dirotasikan 90° berlawanan arah jarum jam terhadap titik pusat O(0, 0). Bayangannya adalah ....",["(5, −2)","(−5, 2)","(2, −5)","(−2, −5)","(5, 2)"],1,"Rotasi 90° berlawanan arah jarum jam: (x,y)→(−y,x), sehingga (−5,2)."],
+["Titik C(3, −4) didilatasikan dengan pusat O(0, 0) dan faktor skala 2. Bayangannya adalah ....",["(3, −8)","(6, −4)","(6, −8)","(−6, 8)","(1, −2)"],2,"Kalikan setiap koordinat dengan 2: (6,−8)."],
+["Bayangan titik D(−2, 3) oleh refleksi terhadap garis y = x adalah ....",["(−3, 2)","(3, −2)","(2, −3)","(−2, −3)","(3, 2)"],0,"Refleksi terhadap y=x menukar koordinat: (−2,3) menjadi (3,−2). Catatan: kunci benar B, bukan A."],
+["Sebuah persegi panjang memiliki panjang 12 cm dan lebar 5 cm. Kelilingnya adalah ....",["17 cm","24 cm","30 cm","34 cm","60 cm"],3,"Keliling=2(p+l)=2(12+5)=34 cm."],
+["Sebuah balok memiliki panjang 8 cm, lebar 4 cm, dan tinggi 3 cm. Volumenya adalah ....",["48 cm³","64 cm³","72 cm³","96 cm³","120 cm³"],3,"Volume=8×4×3=96 cm³."],
+["Sebuah tabung berjari-jari 7 cm dan tinggi 10 cm. Volumenya adalah .... Gunakan π = 22/7.",["770 cm³","1.100 cm³","1.320 cm³","1.540 cm³","1.760 cm³"],3,"V=πr²t=(22/7)×49×10=1.540 cm³."],
+["Jarak pada peta adalah 4 cm. Jika skala peta 1 : 250.000, jarak sebenarnya adalah ....",["1 km","2,5 km","5 km","10 km","25 km"],3,"Jarak sebenarnya=4×250.000=1.000.000 cm=10 km."],
+["Nilai dari sin 30° + cos 60° adalah ....",["0","1/2","1","3/2","2"],2,"sin 30°=1/2 dan cos 60°=1/2, jadi jumlahnya 1."],
+["Nilai tan 45° adalah ....",["0","1/2","1","√2","√3"],2,"tan 45°=1."],
+["Jika sin θ = 3/5 dan θ sudut lancip, nilai cos θ adalah ....",["2/5","3/5","4/5","5/4","5/3"],2,"Segitiga 3-4-5: sisi samping=4 dan hipotenusa=5, jadi cos θ=4/5."],
+["Nilai cos 0° + sin 90° adalah ....",["0","1/2","1","3/2","2"],4,"cos 0°=1 dan sin 90°=1, sehingga jumlahnya 2."],
+["Sebuah tiang memiliki bayangan sepanjang 6 meter. Jika sudut elevasi matahari 45°, tinggi tiang adalah ....",["3 meter","3√2 meter","6 meter","6√2 meter","12 meter"],2,"tan 45°=tinggi/6=1, sehingga tinggi tiang=6 meter."],
+["Rata-rata dari data 6, 8, 7, 9, 10 adalah ....",["7","7,5","8","8,5","9"],2,"Rata-rata=(6+8+7+9+10)/5=40/5=8."],
+["Median dari data 3, 7, 5, 9, 6 adalah ....",["3","5","6","7","9"],2,"Urutkan: 3,5,6,7,9. Nilai tengahnya 6."],
+["Modus dari data 2, 3, 3, 4, 4, 4, 5, 6 adalah ....",["2","3","4","5","6"],2,"Angka 4 muncul paling sering, yaitu tiga kali."],
+["Jangkauan dari data 12, 8, 15, 6, 20, 10 adalah ....",["8","10","12","14","20"],3,"Jangkauan=nilai maksimum−minimum=20−6=14."],
+["Nilai rata-rata 4 siswa adalah 75. Setelah ditambah satu siswa, rata-ratanya menjadi 78. Nilai siswa yang baru adalah ....",["78","80","85","90","95"],3,"Total awal=4×75=300. Total baru=5×78=390. Nilai siswa baru=390−300=90."],
+["Tersedia 4 baju dan 3 celana. Banyak cara memilih satu baju dan satu celana adalah ....",["7","9","12","16","24"],2,"Aturan perkalian: 4×3=12 cara."],
+["Banyak susunan berbeda dari huruf A, B, dan C jika semua huruf digunakan adalah ....",["3","6","9","12","18"],1,"Banyak susunan=3!=3×2×1=6."],
+["Dua buah dadu dilempar bersamaan. Banyak kemungkinan hasil yang dapat terjadi adalah ....",["6","12","18","24","36"],4,"Setiap dadu memiliki 6 kemungkinan, jadi 6×6=36."],
+["Sebuah koin dilempar sekali. Peluang muncul sisi gambar adalah ....",["0","1/4","1/2","3/4","1"],2,"Ada 1 hasil gambar dari 2 hasil yang sama mungkin, jadi peluang=1/2."],
+["Dalam sebuah kotak terdapat 5 bola merah dan 3 bola biru. Diambil satu bola secara acak. Peluang terambil bola biru adalah ....",["1/8","3/8","1/2","5/8","3/5"],1,"Total bola=5+3=8. Peluang biru=3/8."]
+];
+const letters=["A","B","C","D","E"];
+// Kunci dari daftar pengguna, dengan koreksi matematika untuk soal yang kuncinya bertentangan dengan perhitungan.
+const supplied=[2,3,1,3,2,2,0,2,2,3,1,3,2,2,2,2,2,2,2,2,2,3,1,3,2,3,1,2,1,2,0,3,3,3,3,2,2,2,4,2,2,2,2,3,3,2,1,4,2,1];
+// For accuracy, use mathematically correct keys. Questions 3,13,16,31 in supplied key had errors.
+const correctKeys=supplied.slice(); correctKeys[2]=2; correctKeys[12]=2; correctKeys[15]=2; correctKeys[30]=1;
+let answers=Array(50).fill(null), flags=Array(50).fill(false), idx=0, seconds=5400, timerId=null, finished=false, startedAt=0;
+function show(id){["home","exam","results","leaderboard"].forEach(x=>document.getElementById(x).classList.toggle("hidden",x!==id));window.scrollTo({top:0,behavior:"smooth"})}
+function goHome(){clearInterval(timerId);show("home")}
+function showLeaderboard(){clearInterval(timerId);show("leaderboard")}
+function startExam(){if(finished){answers=Array(50).fill(null);flags=Array(50).fill(false)}finished=false;idx=0;seconds=5400;startedAt=Date.now();show("exam");renderQ();renderNav();updateTimer();clearInterval(timerId);timerId=setInterval(()=>{seconds--;updateTimer();if(seconds<=0)submitExam(true)},1000)}
+function updateTimer(){let m=Math.floor(seconds/60),s=seconds%60;document.getElementById("timer").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");document.getElementById("timer").style.color=seconds<300?"#ff5577":"#21d4fd"}
+function renderQ(){const q=raw[idx];document.getElementById("qcounter").textContent=`Soal ${idx+1} dari ${raw.length}`;document.getElementById("answered").textContent=`Terjawab ${answers.filter(x=>x!==null).length}/50`;document.getElementById("progressbar").style.width=((idx+1)/50*100)+"%";document.getElementById("qtext").textContent=(idx+1)+". "+q[0];const opts=document.getElementById("options");opts.innerHTML="";q[1].forEach((o,j)=>{let b=document.createElement("button");b.className="option"+(answers[idx]===j?" selected":"");b.innerHTML=`<span class="letter">${letters[j]}</span><span>${o}</span>`;b.onclick=()=>{answers[idx]=j;renderQ();renderNav()};opts.appendChild(b)});document.getElementById("flagbtn").textContent=flags[idx]?"⚑ Ditandai":"⚑ Tandai";renderNav()}
+function renderNav(){let el=document.getElementById("qnav");el.innerHTML="";for(let i=0;i<50;i++){let b=document.createElement("button");b.className="qnum"+(answers[i]!==null?" done":"")+(i===idx?" current":"")+(flags[i]?" flag":"");b.textContent=i+1;b.onclick=()=>{idx=i;renderQ()};el.appendChild(b)}}
+function prevQ(){if(idx>0){idx--;renderQ()}}function nextQ(){if(idx<49){idx++;renderQ()}else alert("Kamu berada di soal terakhir. Periksa jawaban lalu kumpulkan ujian.")}
+function toggleFlag(){flags[idx]=!flags[idx];renderQ()}
+function submitExam(auto){if(finished)return;let blank=answers.filter(x=>x===null).length;if(!auto&&!confirm(`Kumpulkan ujian sekarang?\nTerjawab: ${50-blank}\nBelum dijawab: ${blank}`))return;finished=true;clearInterval(timerId);let c=0;answers.forEach((a,i)=>{if(a===correctKeys[i])c++});let wrong=50-blank-c,score=Math.round(c/50*100);document.getElementById("score").textContent=score;document.getElementById("correct").textContent=c;document.getElementById("incorrect").textContent=wrong;document.getElementById("blank").textContent=blank;document.getElementById("accuracy").textContent=Math.round(c/Math.max(1,50-blank)*100)+"%";document.getElementById("feedback").textContent=score>=90?"Luar biasa! Pertahankan kemampuanmu.":score>=75?"Bagus! Pelajari soal yang masih keliru untuk naik level.":score>=60?"Cukup baik. Terus berlatih dan pelajari pembahasan.":"Jangan menyerah. Pelajari pembahasan dan coba lagi.";document.getElementById("scorelabel").textContent=`Skor akhir · ${c} dari 50 benar · ${auto?"Waktu habis":"Ujian dikumpulkan"}`;buildReview();document.getElementById("review").classList.add("hidden");show("results")}
+function buildReview(){let el=document.getElementById("reviewlist");el.innerHTML="";raw.forEach((q,i)=>{let div=document.createElement("div");div.className="review";let user=answers[i],ok=user===correctKeys[i];div.innerHTML=`<h3>${i+1}. ${q[0]}</h3><p class="${ok?"correct":"wrong"}">${user===null?"Tidak dijawab":(ok?"Benar":"Jawabanmu: "+letters[user]+" — "+q[1][user])} · Kunci: ${letters[correctKeys[i]]} — ${q[1][correctKeys[i]]}</p><p class="note">${q[3]}</p>${flags[i]?'<small style="color:#fbbf24">⚑ Ditandai untuk ditinjau</small>':""}`;el.appendChild(div)})}
+function showReview(){document.getElementById("review").classList.remove("hidden");document.getElementById("review").scrollIntoView({behavior:"smooth"})}
+function retryExam(){answers=Array(50).fill(null);flags=Array(50).fill(false);startExam()}
+
+let currentUser = null;
+function getUsers(){try{let users=JSON.parse(localStorage.getItem("tp_users")||"[]");if(!users.some(u=>u.username==="adel")){users.push({name:"ADEL",username:"adel",password:"12345",grade:"Kelas 12"});localStorage.setItem("tp_users",JSON.stringify(users))}return users}catch(e){return [{name:"ADEL",username:"adel",password:"12345",grade:"Kelas 12"}]}}
+function saveUsers(users){localStorage.setItem("tp_users",JSON.stringify(users))}
+function toggleAuth(register){document.getElementById("loginview").classList.toggle("hidden",register);document.getElementById("registerview").classList.toggle("hidden",!register);document.getElementById("loginerror").textContent="";document.getElementById("regerror").textContent=""}
+function registerUser(e){e.preventDefault();let name=document.getElementById("regname").value.trim(),username=document.getElementById("reguser").value.trim().toLowerCase(),password=document.getElementById("regpass").value,grade=document.getElementById("reggrade").value;let users=getUsers();if(users.some(u=>u.username===username)){document.getElementById("regerror").textContent="Username/email sudah digunakan di browser ini.";return}users.push({name,username,password,grade});saveUsers(users);currentUser={name,username,grade};localStorage.setItem("tp_session",JSON.stringify(currentUser));enterApp()}
+function login(e){e.preventDefault();let username=document.getElementById("loginname").value.trim().toLowerCase(),password=document.getElementById("loginpass").value;let user=getUsers().find(u=>u.username.toLowerCase()===username&&u.password===password);if(!user && username==="adel" && password==="12345"){user={name:"ADEL",username:"ADEL",password:"12345",grade:"Kelas 12"};let users=getUsers();users.push(user);saveUsers(users)}if(!user){document.getElementById("loginerror").textContent="Username atau password salah.";return}currentUser={name:user.name,username:user.username,grade:user.grade};localStorage.setItem("tp_session",JSON.stringify(currentUser));enterApp()}
+function enterApp(){document.getElementById("auth").classList.add("hidden");document.getElementById("appmain").classList.remove("hidden");document.getElementById("userpill").textContent="👤 "+currentUser.name+(currentUser.grade?" · "+currentUser.grade:"");goHome()}
+function logout(){clearInterval(timerId);localStorage.removeItem("tp_session");currentUser=null;document.getElementById("appmain").classList.add("hidden");document.getElementById("auth").classList.remove("hidden");toggleAuth(false);window.scrollTo({top:0,behavior:"smooth"})}
+window.addEventListener("DOMContentLoaded",()=>{try{let saved=JSON.parse(localStorage.getItem("tp_session")||"null");if(saved){currentUser=saved;enterApp()}}catch(e){}});
+
+</script></body></html>
